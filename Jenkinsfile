@@ -1,5 +1,5 @@
 pipeline {
-    agent { kubernetes { image 'maven:3.3.3' } }
+    agent { kubernetes }
     stages {
         stage('build') {
             steps {
