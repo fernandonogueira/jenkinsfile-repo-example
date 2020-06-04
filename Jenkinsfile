@@ -11,6 +11,13 @@ podTemplate(containers: [
                     sh 'mvn --version'
                 }
             }
+            container('docker') {
+                stage('Topper') {
+                    sh """
+                        docker build -t muito-legal .
+                    """
+                }
+            }
         }
 
     }
